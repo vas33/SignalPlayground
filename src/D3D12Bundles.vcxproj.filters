@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Assets\Shaders">
+      <UniqueIdentifier>{3244b732-e7f4-43f8-82c6-1a16ae519bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{555fc728-cdf6-404e-84a7-07701c038ed1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{58338d2f-f47a-4987-9f74-c97b6e92a504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Signals">
+      <UniqueIdentifier>{bfb6bbff-834f-4982-afab-e6c8c95459aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D3D12Bundles.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameResource.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dx12.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DXSample.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DXSampleHelper.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="occcity.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleCamera.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="StepTimer.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32Application.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="signals\Complex.h">
+      <Filter>Signals</Filter>
+    </ClInclude>
+    <ClInclude Include="signals\DFT.h">
+      <Filter>Signals</Filter>
+    </ClInclude>
+    <ClInclude Include="signals\Playground.h">
+      <Filter>Signals</Filter>
+    </ClInclude>
+    <ClInclude Include="signals\Signal.h">
+      <Filter>Signals</Filter>
+    </ClInclude>
+    <ClInclude Include="signals\Util.h">
+      <Filter>Signals</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D12Bundles.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameResource.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="DXSample.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleCamera.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Win32Application.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shader_mesh_alt_pixel.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shader_mesh_simple_pixel.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shader_mesh_simple_vert.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="occcity.bin">
+      <Filter>Assets</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
