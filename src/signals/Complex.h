@@ -7,11 +7,11 @@ inline Complex ComplexSum(const Complex& numberOne, const Complex& numberTwo)
 {
 	return { numberOne.first + numberTwo.first, numberOne.second + numberTwo.second };
 }
+
 inline Complex ComplexNegation(const Complex& numberOne, const Complex& numberTwo)
 {
 	return { numberOne.first - numberTwo.first, numberOne.second - numberTwo.second };
 }
-
 
 inline float ComplexMagnitude(const Complex& numberOne)
 {
@@ -32,4 +32,9 @@ inline Complex ComplexMultiply(const Complex& numberOne, const Complex& numberTw
 	result.second = numberOne.first * numberTwo.second + numberOne.second * numberTwo.first;
 
 	return result;
+}
+
+inline Complex CompolexPolar(float r, float theta)
+{
+	return { r * cos(theta), r * sin(theta) };
 }

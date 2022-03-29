@@ -38,8 +38,6 @@ void DFTOnSignal(SignalSlot& topSlot, SignalSlot& middleSlot, SignalSlot& bottom
 
 void DFTOnSignalFast(SignalSlot& topSlot, SignalSlot& middleSlot, SignalSlot& bottomSlot)
 {
-	//do discrete fourier on signal					
-
 	SineSignal signal1{ 2.5f, 4.f, 0.f, 2 };
 	SineSignal signal2{ 1.5f, 6.f, 0.f, 2 };
 	SineSignal signal3{ 2.5f, 4.f, 0.f, 2 };
@@ -53,11 +51,6 @@ void DFTOnSignalFast(SignalSlot& topSlot, SignalSlot& middleSlot, SignalSlot& bo
 	RawSignalPtr fCoefficients = DiscreteFT2(*signal.get());
 	RawSignalPtr amplitudes = GetAmplitudesFromSignals(fCoefficients);
 
-
-	//todo FIX Inverse FT
-	//possible problemes:
-	//originals iterate to 2001 this to 2000
-	//wny inverse FT is not reconstructing phase ( TODO add code for phase)
 	RawSignalPtr reconstructedSignal = InverseFT(fCoefficients);
 
 	//draw signals at top slot
@@ -225,7 +218,6 @@ void FastFTExample(SignalSlot& topSlot, SignalSlot& middleSlot, SignalSlot& bott
 void SignalPlayground::Play(SignalSlot& topSlot, SignalSlot& middleSlot, SignalSlot& bottomSlot)
 {
 	//TODO: implement FFInverse
-	//TODO: implement signal filtering for signals that don't have whole number frequency
 
 	////DFTOnSignalFast(topSlot, middleSlot, bottomSlot);
 	//{

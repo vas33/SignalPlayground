@@ -1,7 +1,6 @@
 #pragma once
 #include "Signal.h"
 #include "Util.h"
-#include <complex>
 
 std::pair<float, float>RawSignalDot(const RawSignalPtr& signal1, RawSignalPtr& signal2)
 {
@@ -139,12 +138,8 @@ std::vector<std::pair<float, float>> FastFTImpl(const std::vector<std::pair<floa
 
 	for (int k = 0; k != halfSamples; ++k)
 	{
-		std::complex<float> fromPolar = std::polar(1.0f, -2.f * PI * k / numSamples);
-		std::complex<float> oddNum = std::complex<float>(fOdd[k].first, fOdd[k].second);
-
-		std::complex<float> cmpExponential = fromPolar * oddNum;
-
-		std::pair<float, float> complexExponential{ cmpExponential.real(), cmpExponential.imag() };
+		Complex complexExponential = ComplexMultiply(
+			CompolexPolar(1.f, -2.f * PI * k / numSamples), fOdd[k]);
 
 		frequbins[k] = ComplexSum(fEven[k], complexExponential);
 		frequbins[k + halfSamples] = ComplexNegation(fEven[k], complexExponential);
